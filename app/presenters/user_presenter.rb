@@ -1,5 +1,9 @@
-class UserPresenter < Struct.new(:user, :view)
+class UserPresenter < BasePresenter
   def full_name
-    "#{user.first_name} #{user.last_name}"
+    "#{model.first_name} #{model.last_name}"
+  end
+
+  def joined_at
+    view.time_ago_in_words model.created_at
   end
 end
