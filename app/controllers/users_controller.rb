@@ -10,7 +10,6 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @user = UserPresenter.new @user, view_context
   end
 
   # GET /users/new

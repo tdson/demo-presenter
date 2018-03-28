@@ -1,19 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+<% present @user do |user| %>
+  <p>
+    <strong>Email:</strong>
+    <%= user.email %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.full_name %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= user.full_name %>
+  </p>
 
-<p>
-  <strong>Joined at:</strong>
-  <%= @user.joined_at %>
-</p>
+  <p>
+    <strong>Joined at:</strong>
+    <%= user.joined_at %>
+  </p>
+<% end %>
 
 <!-- <p>
   <strong>First name:</strong>
