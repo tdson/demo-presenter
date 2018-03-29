@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Full name:</strong>
+  <%= UserDecorator.new(@user).display_full_name %>
+</p>
+
 <% present @user do |user| %>
   <p>
     <strong>Email:</strong>
